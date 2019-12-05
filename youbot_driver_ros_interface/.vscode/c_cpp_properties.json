@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/tezer/youbot_ws/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/tezer/youbot_ws/src/youbot/youbot_driver_ros_interface/include",
+                "/home/tezer/youbot_ws/src/youbot/youbot_mapping/include",
+                "/home/tezer/youbot_ws/src/youbot/youbot_navigation/youbot_omni_navigation/include",
+                "/home/tezer/youbot_ws/src/youbot/youbot_teleop/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

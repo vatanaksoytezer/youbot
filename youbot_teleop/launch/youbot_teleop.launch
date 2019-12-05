@@ -1,0 +1,12 @@
+<launch>
+  <!-- Joy node -->
+  <group ns="youbot">
+      <node respawn="true" pkg="joy" type="joy_node" name="youbot_joy">
+          <param name="dev" type="string" value="/dev/input/js0" />
+          <param name="deadzone" value="0.12" />
+      </node>
+      <!-- Segway node -->
+      <node pkg="youbot_teleop" type="omni_teleop.py" name="youbot_teleop"/>    
+  </group>
+
+</launch>

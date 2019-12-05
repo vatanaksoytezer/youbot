@@ -1,0 +1,20 @@
+<launch>
+    <!-- <group ns="youbot"> -->
+    <node pkg="gmapping" type="slam_gmapping" name="youbot_gmapping" output="screen" >
+        <remap from="scan" to="youbot/scan" />
+        <remap from="map" to="youbot/map"/>
+        <param name="map_frame" value="youbot/map"/>
+        <param name="odom_frame" value="youbot/odom" />
+        <param name="base_frame" value="youbot/base_link" />
+        <!-- Map updates in seconds, default 5 -->
+        <param name="map_update_interval" value="2.5"/>
+        <!-- Default is 0.052 -->
+        <param name="transform_publish_period" value="0.02"/>
+    </node>
+    <!-- </group> -->
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find youbot_mapping)/rviz/multi-bot.rviz">
+        <remap from="move_base_simple/goal" to="/youbot/move_base_simple/goal"/>
+    </node>
+
+</launch>
